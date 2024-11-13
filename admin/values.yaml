@@ -101,9 +101,6 @@ volumes:
   - name: config
     configMap:
       name: admin-cm
-  - name: sql
-    configMap:
-      name: admin-cm  # 引用前面创建的 ConfigMap
 # - name: foo
 #   secret:
 #     secretName: mysecret
@@ -115,7 +112,7 @@ volumeMounts:
     name: config
     subPath: config.yaml
   - mountPath: /app/etc/sql.sql
-    name: sql
+    name: config
     subPath: sql.sql
 
 nodeSelector: {}
