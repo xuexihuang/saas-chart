@@ -16,14 +16,14 @@ ingress:
   hosts:
     - host: www.game360.club
       paths:
-        - path: /admin(/|$)(.*)
+        - path: /game(/|$)(.*)
           pathType: ImplementationSpecific
   tls: []
 
 sqlConfig:
   sql: |
     -- Example SQL content
-    CREATE TABLE admin (
+    CREATE TABLE game (
       id INT PRIMARY KEY,
       name VARCHAR(100)
     );
