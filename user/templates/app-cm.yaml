@@ -7,3 +7,5 @@ data:
     {{- with .Values.config }}
         {{- toYaml . | nindent 4 }}
     {{- end }}
+  sql.sql: |+
+    {{- .Values.sqlConfig.sql | nindent 4 }}
